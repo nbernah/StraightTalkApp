@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".TERTIARY">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_Tertiary"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:layout_marginRight="@dimen/margin_right"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="STF_ID:"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Stf_id"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"
+            android:hint="Enter stf_id"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="INST_NAME:"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <Spinner
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/O_INST_NAME"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="O_INST_COURSE:"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <Spinner
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/O_INST_COURSE"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="STUDENT_NUMBER:"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/STUDENT_NUMBER"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"
+            android:hint="Enter student_number"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="ACCOMODATION:"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <Spinner
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ACCOMODATION"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="O_INST_YOS:"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/O_INST_YOS"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"
+            android:hint="Enter o_inst_yos"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="O_INST_YOC:"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/O_INST_YOC"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"
+            android:hint="Enter o_inst_yoc"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="AWARD_LEVEL:"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/AWARD_LEVEL"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"
+            android:hint="Enter award_level"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top"
+            android:text="submit"
+            android:id="@+id/submit_btn"
+            android:background="@color/Black"
+            android:textColor="@color/White"/>
+    </LinearLayout>
+
+
+
+
+
+
+</ScrollView>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.netlabs.straighttalk">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- <meta-data -->
+        <!-- android:name=".PersonalDetails" -->
+        <!-- android:label="PERSONAL_DETAILS" /> -->
+        <!-- <meta-data -->
+        <!-- android:name=".Secondary" -->
+        <!-- android:label="SECONDARY_DETAILS" /> -->
+        <!-- <meta-data -->
+        <!-- android:name=".Institutions" -->
+        <!-- android:label="INSTITUTIONS" /> -->
+        <activity
+            android:name=".List_View"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PERSONAL_DETAILS"
+            android:parentActivityName=".List_View" />
+        <activity
+            android:name=".SECONDARY"
+            android:parentActivityName=".List_View" />
+        <activity
+            android:name=".INSTITUTIONS"
+            android:parentActivityName=".List_View" />
+        <activity
+            android:name=".ViewPersonalDetailsActivity"
+            android:label="@string/title_activity_view_personal_details"
+            android:parentActivityName=".List_View"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.netlabs.straighttalk.List_View" />
+        </activity>
+        <activity android:name=".ViewSecondaryActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

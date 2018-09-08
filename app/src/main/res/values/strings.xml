@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">STRAIGHTTALK</string>
+    <string name="login_string">Login panel</string>
+    <string name="username_placeholder">Enter your username</string>
+    <string name="password_placeholder">Enter your password</string>
+    <string name="title_activity_personal__details">PERSONAL_DETAILS</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="STF_ID">Enter stf_id</string>
+    <string name="STUD_FAMILY_NAME_placeholder">Enter family_name</string>
+    <string name="STUD_GIVEN_NAME_placeholder">Enter given_name</string>
+    <string name="ETHNICITY_placeholder">Enter ethnicity</string>
+    <string name="HEALTH_STATUS_placeholder">Enter health_status</string>
+    <string name="CONTACT_PHONE_placeholder">Enter contact_phone</string>
+    <string name="CONTACT_EMAIL_placeholder">Enter contact_email</string>
+    <string name="PARENT_FAMILY_NAME_placeholder">Enter parent_family_name</string>
+    <string name="PARENT_GIVEN_NAME_placeholder">Enter parent_given_name</string>
+    <string name="PARENT_CONTACT_placeholder">Enter parent_contact</string>
+    <string name="ACCOUNT_NUMBER_placeholder">Enter account_number</string>
+    <string name="DROPOUT_REASON_placeholder">Enter dropout_reason</string>
+    <string name="NOTES_placeholder">Enter notes</string>
+    <string name="DOB_placeholder">Enter DOB</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    //<!--TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="SS_NAME">ss name</string>
+    <string name="SS_FORM">ss form</string>
+    <string name="SS_STREAM">ss stream</string>
+    <string name="FAV_SUBJECT">fav subject</string>
+    <string name="FAV_SPORT">fav sport</string>
+    <string name="SCHOOL_CODE">school code</string>
+    <string name="STUDENT_ID">student stfId</string>
+    <string name="EXAM_DATE">exam date</string>
+    <string name="BURSARY_FUNDER">Bursary funder</string>
+    <string name="BURSARY_DATE">bursary date</string>
+    <string name="BURSARY_YO_START">bursary yo start</string>
+    <string name="CURRENT_CLASS">current class</string>
+    <string name="CLASS_COMPLETION_SS">class completion</string>
+    <string name="COMPLETION_SS">completion ss</string>
+    <string name="title_activity_institutions">Institutions</string>
+    <string name="title_activity_university">UNIVERSITY</string>
+    <string name="title_activity_tertiary">TERTIARY</string>
+    <string name="title_activity_create_account">CreateAccount</string>
+    <string name="appbar_scrolling_view_behavior">testfield</string>
+
+    <string-array name="institutions">
+        <item>VIEW PERSONAL_DETAILS</item>
+        <item>NEW PERSONAL_DETAILS</item>
+        <item>SECONDARY</item>
+        <item>INSTITUTIONS</item>
+        <!--<item>INSTITUTIONS</item>-->
+        <!--<item>TERTIARY</item>-->
+    </string-array>
+    <string name="title_activity_view_personal_details">ViewPersonalDetailsActivity</string>
+    <string name="view_personal_details_listitem_title_string">%s, %s</string>
+
+</resources>

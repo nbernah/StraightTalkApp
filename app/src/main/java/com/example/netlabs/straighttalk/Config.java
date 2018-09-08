@@ -1,0 +1,83 @@
+package com.example.netlabs.straighttalk;
+
+public class Config {
+
+    public static String url = "http://10.120.9.201/stalk/";
+    public static String LOGIN = url + "login.php";
+    public static String No_server = "check your internet connect";
+    public static String Secondary = "secondary";
+    //public static String University = "university";
+    public static String PersonalDetails = "personal_details";
+    //public static String TERTIARY = "tertiary";
+    //public static String Institutions = "institutions";
+    //public static String University = "";
+    public int STF_ID;
+    public static String USERNAME = "username";
+    public static String PASSWORD = "password";
+    public static String STUD_FAMILY_NAME ="stud_family_name";
+    public static String STUD_GIVEN_NAME ="stud_given_name";
+    public static String DOB ="dob";
+    public static String GENDER ="gender";
+    public static String ETHNICITY ="ethnicity";
+    public static String ENTRY_AGGRTS ="entry_aggrts";
+    public static String HEALTH_STATUS ="health_status";
+    public static String STUD_CONTACT_PHONE ="stud_contact_phone";
+    public static String STUD_CONTACT_EMAIL ="stud_contact_email";
+    public static String PARENT1_FAMILY_NAME ="parent1_family_name";
+    public static String PARENT1_GIVEN_NAME ="parent1_given_name";
+    public static String PARENT1_CONTACT ="parent1_contact";
+    public static String PARENT2_FAMILY_NAME ="parent2_family_name";
+    public static String PARENT2_GIVEN_NAME ="parent2_given_name";
+    public static String PARENT2_CONTACT ="parent2_contact";
+    public static String DIST_ORIGIN ="dist_origin";
+    public static String SUB_COUNTY ="sub_county";
+    public static String VILLAGE_NAME ="village_name";
+    public static String BANK ="bank";
+    public static String BANK_ADDR ="bank_addr";
+    public static String ACCOUNT_NUMBER ="account_number";
+    public static String CURRENT_STATE ="current_state";
+    public static String DROPOUT_REASON ="dropout_reason";
+    public static String NOTES ="notes";
+    //public static String STF_ID ="stf_id";
+    public static String SS_NAME ="ss_name" ;
+    public static String SS_FORM ="ss_form";
+    public static String SS_STREAM ="ss_subject";
+    public static String SUBJECT_LIST ="subject_list";
+    public static String FAV_SUBJECT ="fav_subject";
+    public static String FAV_SPORT ="fav_sport";
+    public static String SCHOOL_CODE ="school_code";
+    public static String STUDENT_ID ="student_id";
+    public static String EXAM_DATE ="exam_date";
+    public static String BURSARY_FUNDER ="bursary_funder";
+    public static String BURSARY_DATE ="bursary-date";
+    public static String BURSARY_YO_START ="bursary_yo_start";
+    public static String CURRENT_CLASS ="current_class";
+    public static String CLASS_COMPLETION_SS ="class_completion_ss";
+    public static String COMPLETION_SS ="completion_ss";
+    //public static String STF_ID ="stf_id";
+    public static String COLLEGE_NAME ="college_name";
+    public static String UNI_COURSE ="uni_course";
+    public static String STUDENT_NUMBER ="student_number";
+    public static String REGISTRATION_NUMBER ="registration_number";
+    public static String ACCOMODATION ="accomodation";
+    public static String UNI_YOS ="uni_yos";
+    public static String UNI_YOC ="uni_yoc";
+    public static String UNI_AWARD_LEVEL ="uni_award_level";
+    //public static String STF_ID ="stf_id";
+    public static String O_INST_NAME ="o_inst_name";
+    public static String O_INST_COURSE ="o_inst_course";
+    //public static String STUDENT_NUMBER ="student_number";
+    //public static String ACCOMODATION ="accomodation";
+    public static String O_INST_YOS ="o_inst_yos";
+    public static String O_INST_YOC ="o_inst_yoc";
+    public static String addSecondaryDetails ="Entering secondary_details please wait....";
+    public static String addUniversityDetails ="Entering university_details please wait..";
+    public static String addTertiaryDetails = "Entering tertiary_details please wait...";
+    public static String AWARD_LEVEL ="award_level";
+    public static final String MYPREFERENCES = "MyPrefs";
+    public static final String LOGIN_PROGRESS = "Loading please wait..";
+    public static final String server_error = "please activate your internet connection";
+
+
+
+}
