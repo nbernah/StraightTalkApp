@@ -5,26 +5,26 @@ import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 import android.support.annotation.NonNull;
 
-import com.example.netlabs.straighttalk.model.database.BursaryRepository;
-import com.example.netlabs.straighttalk.model.database.entities.PersonalDetails;
+import com.example.netlabs.straighttalk.model.database.BursaryDBRepository;
+import com.example.netlabs.straighttalk.model.database.entities.Student;
 
 import java.util.List;
 
 public class PersonalDetailsViewModel extends AndroidViewModel {
-    private BursaryRepository repo;
-    private LiveData<List<PersonalDetails>> personalDetailsList;
+    private BursaryDBRepository repo;
+    private LiveData<List<Student>> personalDetailsList;
 
     public PersonalDetailsViewModel(@NonNull Application application) {
         super(application);
-        repo = BursaryRepository.getRepository(application);
-        personalDetailsList = repo.getAllPersonalDetails();
+        repo = BursaryDBRepository.getRepository(application);
+//        personalDetailsList = repo.getAllPersonalDetails();
     }
 
-    public LiveData<List<PersonalDetails>> getPersonalDetails() {
+    public LiveData<List<Student>> getPersonalDetails() {
         return personalDetailsList;
     }
 
-    public void insertPersonalDetails(PersonalDetails personalDetails) {
-        repo.insertPersonalDetails(personalDetails);
+    public void insertPersonalDetails(Student student) {
+//        repo.insertPersonalDetails(student);
     }
 }

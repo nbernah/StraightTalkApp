@@ -1,10 +1,8 @@
 package com.example.netlabs.straighttalk;
 
-import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -18,11 +16,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.netlabs.straighttalk.model.database.entities.PersonalDetails;
+import com.example.netlabs.straighttalk.model.database.entities.Student;
 import com.example.netlabs.straighttalk.viewmodel.PersonalDetailsViewModel;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class PERSONAL_DETAILS extends AppCompatActivity implements View.OnClickListener{
@@ -243,32 +240,32 @@ public class PERSONAL_DETAILS extends AppCompatActivity implements View.OnClickL
         final String dropout_reason = editTextDropout_reason.getText().toString().trim();
         final String notes = editTextNotes.getText().toString().trim();
 
-        PersonalDetails details = new PersonalDetails();
-        details.setStfId(Integer.parseInt(stf_id));
-        details.setStudFamilyName(stud_family_name);
-        details.setStudGivenName(stud_given_name);
-        details.setDob(dob);
-        details.setGender(gender);
-        details.setEthnicity(ethnicity);
-        details.setEntryAggrts(Integer.parseInt(entry_aggrts));
-        details.setHealthStatus(health_status);
-        details.setStudContactPhone(Integer.parseInt(stud_contact_phone));
-        details.setStudContactEmail(stud_contact_email);
-        details.setParent1FamilyName(parent1_family_name);
-        details.setParent1GivenName(parent1_given_name);
-        details.setParent1Contact(Integer.parseInt(parent1_contact));
-        details.setParent2FamilyName(parent2_family_name);
-        details.setParent2GivenName(parent2_given_name);
-        details.setParent2Contact(Integer.parseInt(parent2_contact));
-        details.setVillageName(village_name);
-        details.setBank(bank);
-        details.setBankAddr(bank_addr);
-        details.setAccountNumber(account_number);
-        details.setCurrentState(current_state);
-        details.setDropOutReason(dropout_reason);
-        details.setNotes(notes);
+//        Student details = new Student();
+//        details.setStfId(Integer.parseInt(stf_id));
+//        details.setStudFamilyName(stud_family_name);
+//        details.setStudGivenName(stud_given_name);
+//        details.setDob(dob);
+//        details.setGender(gender);
+//        details.setEthnicity(ethnicity);
+//        details.setEntryAggrts(Integer.parseInt(entry_aggrts));
+//        details.setHealthStatus(health_status);
+//        details.setStudContactPhone(Integer.parseInt(stud_contact_phone));
+//        details.setStudContactEmail(stud_contact_email);
+//        details.setParent1FamilyName(parent1_family_name);
+//        details.setParent1GivenName(parent1_given_name);
+//        details.setParent1Contact(Integer.parseInt(parent1_contact));
+//        details.setParent2FamilyName(parent2_family_name);
+//        details.setParent2GivenName(parent2_given_name);
+//        details.setParent2Contact(Integer.parseInt(parent2_contact));
+//        details.setVillageName(village_name);
+//        details.setBank(bank);
+//        details.setBankAddr(bank_addr);
+//        details.setAccountNumber(account_number);
+//        details.setCurrentState(current_state);
+//        details.setDropOutReason(dropout_reason);
+//        details.setNotes(notes);
 
-        viewModel.insertPersonalDetails(details);
+//        viewModel.insertPersonalDetails(details);
     }
 
 }

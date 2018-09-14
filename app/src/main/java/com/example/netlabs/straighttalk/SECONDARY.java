@@ -1,30 +1,16 @@
 package com.example.netlabs.straighttalk;
 
 import android.arch.lifecycle.ViewModelProviders;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.example.netlabs.straighttalk.model.database.BursaryRepository;
-import com.example.netlabs.straighttalk.model.database.entities.PersonalDetails;
+import com.example.netlabs.straighttalk.model.database.BursaryDBRepository;
 import com.example.netlabs.straighttalk.model.database.entities.Secondary;
-import com.example.netlabs.straighttalk.viewmodel.PersonalDetailsViewModel;
 import com.example.netlabs.straighttalk.viewmodel.SecondaryViewModel;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class SECONDARY extends AppCompatActivity implements View.OnClickListener {
     private static final String SUBMIT_URL = "http://localhost/phpmyadmin/sql.php?server=1&db=stalk&table=users&pos=0&token=" + MyConfig.TOKEN;
@@ -120,24 +106,24 @@ public class SECONDARY extends AppCompatActivity implements View.OnClickListener
 
 
         Secondary details = new Secondary();
-        details.setStfId(Integer.parseInt(stf_id));
-        //details.setSsName(ss_name);
-        details.setSsForm(Integer.parseInt(ss_form));
-        details.setSsStream(ss_stream);
-        details.setFavSubject(fav_subject);
-        details.setFavSport(fav_sport);
-        details.setStudentId(student_id);
-        details.setExamDate(exam_date);
-        details.setBursaryFunder(bursary_funder);
-        details.setBursaryDate(bursary_date);
-        details.setBursaryYoStart(bursary_yo_start);
-        details.setCurrentClass(current_class);
-        details.setClassCompletionSS(class_completion_ss);
-        details.setCompletionSS(completion_ss);
-
-
-        BursaryRepository viewModel = null;
-        viewModel.insertSecondary(details);
+//        details.setStfId(Integer.parseInt(stf_id));
+//        //details.setSsName(ss_name);
+//        details.setSsForm(Integer.parseInt(ss_form));
+//        details.setSsStream(ss_stream);
+//        details.setFavSubject(fav_subject);
+//        details.setFavSport(fav_sport);
+//        details.setStudentId(student_id);
+//        details.setExamDate(exam_date);
+//        details.setBursaryFunder(bursary_funder);
+//        details.setBursaryDate(bursary_date);
+//        details.setBursaryYoStart(bursary_yo_start);
+//        details.setCurrentClass(current_class);
+//        details.setClassCompletionSS(class_completion_ss);
+//        details.setCompletionSS(completion_ss);
+//
+//
+//        BursaryDBRepository viewModel = null;
+//        viewModel.insertSecondary(details);
 
     }
 

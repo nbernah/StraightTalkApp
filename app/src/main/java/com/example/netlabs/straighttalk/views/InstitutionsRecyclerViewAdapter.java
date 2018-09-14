@@ -7,14 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.netlabs.straighttalk.model.database.entities.Institutions;
+import com.example.netlabs.straighttalk.model.database.entities.Institution;
 
 
 import java.util.List;
 
 public class InstitutionsRecyclerViewAdapter extends RecyclerView.Adapter<InstitutionsRecyclerViewAdapter.InstitutionsViewHolder> {
     LayoutInflater inflater;
-    List<Institutions> detailsList;
+    List<Institution> detailsList;
 
     public InstitutionsRecyclerViewAdapter(Context context) {
         inflater = LayoutInflater.from(context);

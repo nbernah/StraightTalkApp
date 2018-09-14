@@ -2,8 +2,6 @@ package com.example.netlabs.straighttalk;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,11 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.netlabs.straighttalk.model.database.entities.PersonalDetails;
 import com.example.netlabs.straighttalk.model.database.entities.Secondary;
-import com.example.netlabs.straighttalk.viewmodel.PersonalDetailsViewModel;
 import com.example.netlabs.straighttalk.viewmodel.SecondaryViewModel;
-import com.example.netlabs.straighttalk.views.PersonalDetailsRecyclerViewAdapter;
 import com.example.netlabs.straighttalk.views.SecondaryRecyclerViewAdapter;
 
 import java.util.List;
