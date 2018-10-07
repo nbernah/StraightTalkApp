@@ -17,10 +17,10 @@ public class Secondary {
     private int id;
 
     @ColumnInfo(name = DBConstants.SECONDARY_TABLE_COLUMN_FORM)
-    private int form;
+    private String form; // TODO change form to string
 
     @ColumnInfo(name = DBConstants.SECONDARY_TABLE_COLUMN_STREAM)
-    private char stream;
+    private String stream; // TODO change stream to string
 
     @ColumnInfo(name = DBConstants.SECONDARY_TABLE_COLUMN_STUDENT_INDEX)
     private String studentIndex;
@@ -43,6 +43,57 @@ public class Secondary {
     )
     private int school;
 
+    @ForeignKey(
+            entity = Student.class,
+            parentColumns = {
+                    DBConstants.STUDENT_TABLE_COLUMN_ID,
+                    DBConstants.STUDENT_TABLE_COLUMN_BURSARY_ID,
+                    DBConstants.STUDENT_TABLE_COLUMN_COMMENTS,
+                    DBConstants.STUDENT_TABLE_COLUMN_CURRENT_STATE,
+                    DBConstants.STUDENT_TABLE_COLUMN_DISTRICT_NAME,
+                    DBConstants.STUDENT_TABLE_COLUMN_DOB,
+                    DBConstants.STUDENT_TABLE_COLUMN_DROPOUT_REASON,
+                    DBConstants.STUDENT_TABLE_COLUMN_ENTRY_GRADE,
+                    DBConstants.STUDENT_TABLE_COLUMN_ETHNICITY,
+                    DBConstants.STUDENT_TABLE_COLUMN_FUNDER,
+                    DBConstants.STUDENT_TABLE_COLUMN_GENDER,
+                    DBConstants.STUDENT_TABLE_COLUMN_LEVEL,
+                    DBConstants.STUDENT_TABLE_COLUMN_NAME,
+                    DBConstants.STUDENT_TABLE_COLUMN_NATIONAL_ID,
+                    DBConstants.STUDENT_TABLE_COLUMN_NOTES,
+                    DBConstants.STUDENT_TABLE_COLUMN_PARENT1_NAME,
+                    DBConstants.STUDENT_TABLE_COLUMN_PARENT1_PHONE,
+                    DBConstants.STUDENT_TABLE_COLUMN_PARENT2_NAME,
+                    DBConstants.STUDENT_TABLE_COLUMN_PARENT2_PHONE,
+                    DBConstants.STUDENT_TABLE_COLUMN_STUDENT_EMAIL,
+                    DBConstants.STUDENT_TABLE_COLUMN_STUDENT_PHONE,
+                    DBConstants.STUDENT_TABLE_COLUMN_SUBCOUNTY,
+                    DBConstants.STUDENT_TABLE_COLUMN_UACE_GRADE,
+                    DBConstants.STUDENT_TABLE_COLUMN_UCE_GRADE,
+                    DBConstants.STUDENT_TABLE_COLUMN_VILLAGE,
+                    DBConstants.STUDENT_TABLE_COLUMN_YEAR_OF_END_AT_INSTITUTION,
+                    DBConstants.STUDENT_TABLE_COLUMN_YEAR_OF_REGISTRATION,
+                    DBConstants.STUDENT_TABLE_COLUMN_YEAR_OF_START_AT_INSTITUTION
+            },
+            childColumns = {
+                    DBConstants.SECONDARY_TABLE_COLUMN_ID,
+                    DBConstants.SECONDARY_TABLE_COLUMN_FORM,
+                    DBConstants.SECONDARY_TABLE_COLUMN_STREAM,
+                    DBConstants.SECONDARY_TABLE_COLUMN_STUDENT_INDEX
+            },
+            onUpdate = ForeignKey.CASCADE,
+            onDelete = ForeignKey.CASCADE
+    )
+    private int studentId;
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
+
     @NonNull
     public int getId() {
         return id;
@@ -53,20 +104,20 @@ public class Secondary {
     }
 
     @NonNull
-    public int getForm() {
+    public String getForm() {
         return form;
     }
 
-    public void setForm(@NonNull int form) {
+    public void setForm(@NonNull String form) {
         this.form = form;
     }
 
     @NonNull
-    public char getStream() {
+    public String getStream() {
         return stream;
     }
 
-    public void setStream(@NonNull char stream) {
+    public void setStream(@NonNull String stream) {
         this.stream = stream;
     }
 

@@ -23,9 +23,9 @@ public interface InstitutionDAO {
     @Query("SELECT * FROM " + DBConstants.INSTITUTION_TABLE_NAME)
     LiveData<List<Institution>> getAllInstitutions();
 
-    @Query("SELECT * FROM " + DBConstants.INSTITUTION_TABLE_NAME + " WHERE id = :id")
-    Institution getInstitution(int id);
+    @Query("SELECT * FROM " + DBConstants.INSTITUTION_TABLE_NAME + " WHERE studentId = :studentId")
+    Institution getInstitution(int studentId);
 
-    @Query("DELETE FROM " + DBConstants.INSTITUTION_TABLE_NAME + " WHERE id = :id")
-    void deleteInstitution(int id);
+    @Query("DELETE FROM " + DBConstants.INSTITUTION_TABLE_NAME + " WHERE studentId = :studentId")
+    void deleteInstitution(int studentId);
 }

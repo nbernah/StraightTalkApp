@@ -7,7 +7,7 @@ public interface BursaryRemoteRepository {
     void downloadCoursesFromRemote();
     void downloadSchoolsFromRemote();
     void downloadHostelsFromRemote();
-    void downloadFundersFromRemote();
+//    void downloadFundersFromRemote();
 
     void uploadStudentPersonalDetailsToRemote();
     void uploadSecondarySchoolStudentInfoToRemote();

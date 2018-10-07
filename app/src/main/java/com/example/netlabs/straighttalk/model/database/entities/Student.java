@@ -38,7 +38,7 @@ public class Student {
     private int entryGrade;
 
     @ColumnInfo(name = DBConstants.STUDENT_TABLE_COLUMN_STUDENT_PHONE)
-    private int studentPhone;
+    private String studentPhone;
 
     @ColumnInfo(name = DBConstants.STUDENT_TABLE_COLUMN_STUDENT_EMAIL)
     private String studentEmail;
@@ -49,13 +49,13 @@ public class Student {
 
     @NonNull
     @ColumnInfo(name = DBConstants.STUDENT_TABLE_COLUMN_PARENT1_PHONE)
-    private int parent1Phone;
+    private String parent1Phone;
 
     @ColumnInfo(name = DBConstants.STUDENT_TABLE_COLUMN_PARENT2_NAME)
     private String parent2Name;
 
     @ColumnInfo(name = DBConstants.STUDENT_TABLE_COLUMN_PARENT2_PHONE)
-    private int parent2Phone;
+    private String parent2Phone;
 
     @NonNull
     @ColumnInfo(name = DBConstants.STUDENT_TABLE_COLUMN_VILLAGE)
@@ -113,55 +113,55 @@ public class Student {
     @ColumnInfo(name = DBConstants.STUDENT_TABLE_COLUMN_FUNDER)
     private String funder;
 
-    @ForeignKey(
-            entity = School.class,
-            parentColumns = {
-                    DBConstants.SCHOOL_TABLE_COLUMN_ID,
-                    DBConstants.SCHOOL_TABLE_COLUMN_SCHOOL_NAME,
-                    DBConstants.SCHOOL_TABLE_COLUMN_LEVEL
-            },
-            childColumns = {
-                    DBConstants.STUDENT_TABLE_COLUMN_ID,
-                    DBConstants.STUDENT_TABLE_COLUMN_BURSARY_ID,
-                    DBConstants.STUDENT_TABLE_COLUMN_COMMENTS,
-                    DBConstants.STUDENT_TABLE_COLUMN_CURRENT_STATE,
-                    DBConstants.STUDENT_TABLE_COLUMN_DISTRICT_NAME,
-                    DBConstants.STUDENT_TABLE_COLUMN_DOB,
-                    DBConstants.STUDENT_TABLE_COLUMN_DROPOUT_REASON,
-                    DBConstants.STUDENT_TABLE_COLUMN_ENTRY_GRADE,
-                    DBConstants.STUDENT_TABLE_COLUMN_ETHNICITY,
-                    DBConstants.STUDENT_TABLE_COLUMN_FUNDER,
-                    DBConstants.STUDENT_TABLE_COLUMN_GENDER,
-                    DBConstants.STUDENT_TABLE_COLUMN_LEVEL,
-                    DBConstants.STUDENT_TABLE_COLUMN_NAME,
-                    DBConstants.STUDENT_TABLE_COLUMN_NATIONAL_ID,
-                    DBConstants.STUDENT_TABLE_COLUMN_NOTES,
-                    DBConstants.STUDENT_TABLE_COLUMN_PARENT1_NAME,
-                    DBConstants.STUDENT_TABLE_COLUMN_PARENT1_PHONE,
-                    DBConstants.STUDENT_TABLE_COLUMN_PARENT2_NAME,
-                    DBConstants.STUDENT_TABLE_COLUMN_PARENT2_PHONE,
-                    DBConstants.STUDENT_TABLE_COLUMN_STUDENT_EMAIL,
-                    DBConstants.STUDENT_TABLE_COLUMN_STUDENT_PHONE,
-                    DBConstants.STUDENT_TABLE_COLUMN_SUBCOUNTY,
-                    DBConstants.STUDENT_TABLE_COLUMN_UACE_GRADE,
-                    DBConstants.STUDENT_TABLE_COLUMN_UCE_GRADE,
-                    DBConstants.STUDENT_TABLE_COLUMN_VILLAGE,
-                    DBConstants.STUDENT_TABLE_COLUMN_YEAR_OF_END_AT_INSTITUTION,
-                    DBConstants.STUDENT_TABLE_COLUMN_YEAR_OF_REGISTRATION,
-                    DBConstants.STUDENT_TABLE_COLUMN_YEAR_OF_START_AT_INSTITUTION
-            },
-            onUpdate = ForeignKey.CASCADE,
-            onDelete = ForeignKey.CASCADE
-    )
-    private int school;
-
-    public int getSchool() {
-        return school;
-    }
-
-    public void setSchool(int school) {
-        this.school = school;
-    }
+//    @ForeignKey(
+//            entity = School.class,
+//            parentColumns = {
+//                    DBConstants.SCHOOL_TABLE_COLUMN_ID,
+//                    DBConstants.SCHOOL_TABLE_COLUMN_SCHOOL_NAME,
+//                    DBConstants.SCHOOL_TABLE_COLUMN_LEVEL
+//            },
+//            childColumns = {
+//                    DBConstants.STUDENT_TABLE_COLUMN_ID,
+//                    DBConstants.STUDENT_TABLE_COLUMN_BURSARY_ID,
+//                    DBConstants.STUDENT_TABLE_COLUMN_COMMENTS,
+//                    DBConstants.STUDENT_TABLE_COLUMN_CURRENT_STATE,
+//                    DBConstants.STUDENT_TABLE_COLUMN_DISTRICT_NAME,
+//                    DBConstants.STUDENT_TABLE_COLUMN_DOB,
+//                    DBConstants.STUDENT_TABLE_COLUMN_DROPOUT_REASON,
+//                    DBConstants.STUDENT_TABLE_COLUMN_ENTRY_GRADE,
+//                    DBConstants.STUDENT_TABLE_COLUMN_ETHNICITY,
+//                    DBConstants.STUDENT_TABLE_COLUMN_FUNDER,
+//                    DBConstants.STUDENT_TABLE_COLUMN_GENDER,
+//                    DBConstants.STUDENT_TABLE_COLUMN_LEVEL,
+//                    DBConstants.STUDENT_TABLE_COLUMN_NAME,
+//                    DBConstants.STUDENT_TABLE_COLUMN_NATIONAL_ID,
+//                    DBConstants.STUDENT_TABLE_COLUMN_NOTES,
+//                    DBConstants.STUDENT_TABLE_COLUMN_PARENT1_NAME,
+//                    DBConstants.STUDENT_TABLE_COLUMN_PARENT1_PHONE,
+//                    DBConstants.STUDENT_TABLE_COLUMN_PARENT2_NAME,
+//                    DBConstants.STUDENT_TABLE_COLUMN_PARENT2_PHONE,
+//                    DBConstants.STUDENT_TABLE_COLUMN_STUDENT_EMAIL,
+//                    DBConstants.STUDENT_TABLE_COLUMN_STUDENT_PHONE,
+//                    DBConstants.STUDENT_TABLE_COLUMN_SUBCOUNTY,
+//                    DBConstants.STUDENT_TABLE_COLUMN_UACE_GRADE,
+//                    DBConstants.STUDENT_TABLE_COLUMN_UCE_GRADE,
+//                    DBConstants.STUDENT_TABLE_COLUMN_VILLAGE,
+//                    DBConstants.STUDENT_TABLE_COLUMN_YEAR_OF_END_AT_INSTITUTION,
+//                    DBConstants.STUDENT_TABLE_COLUMN_YEAR_OF_REGISTRATION,
+//                    DBConstants.STUDENT_TABLE_COLUMN_YEAR_OF_START_AT_INSTITUTION
+//            },
+//            onUpdate = ForeignKey.CASCADE,
+//            onDelete = ForeignKey.CASCADE
+//    )
+//    private int school;
+//
+//    public int getSchool() {
+//        return school;
+//    }
+//
+//    public void setSchool(int school) {
+//        this.school = school;
+//    }
 
     @NonNull
     public int getId() {
@@ -216,11 +216,11 @@ public class Student {
         this.entryGrade = entryGrade;
     }
 
-    public int getStudentPhone() {
+    public String getStudentPhone() {
         return studentPhone;
     }
 
-    public void setStudentPhone(int studentPhone) {
+    public void setStudentPhone(String studentPhone) {
         this.studentPhone = studentPhone;
     }
 
@@ -242,11 +242,11 @@ public class Student {
     }
 
     @NonNull
-    public int getParent1Phone() {
+    public String getParent1Phone() {
         return parent1Phone;
     }
 
-    public void setParent1Phone(@NonNull int parent1Phone) {
+    public void setParent1Phone(@NonNull String parent1Phone) {
         this.parent1Phone = parent1Phone;
     }
 
@@ -258,11 +258,11 @@ public class Student {
         this.parent2Name = parent2Name;
     }
 
-    public int getParent2Phone() {
+    public String getParent2Phone() {
         return parent2Phone;
     }
 
-    public void setParent2Phone(int parent2Phone) {
+    public void setParent2Phone(String parent2Phone) {
         this.parent2Phone = parent2Phone;
     }
 

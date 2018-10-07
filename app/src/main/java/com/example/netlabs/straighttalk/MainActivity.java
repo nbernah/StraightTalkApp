@@ -2,8 +2,10 @@ package com.example.netlabs.straighttalk;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +19,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.netlabs.straighttalk.views.syncing.WifiStateBroadcastReceiver;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,7 +32,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private static final String ACCOUNT_TYPE = "straighttalk.co.ug";
     private static final String ACCOUNT = "dummyaccount";
-    private Account account;
+
+    private static final long SECONDS_PER_MINUTE = 60L;
+    private static final long MINUTES_PER_HOUR = 60L;
+    private static final long SYNC_INTERVAL =
+            MINUTES_PER_HOUR *
+                    SECONDS_PER_MINUTE * 3; // every 3 hours
 
     private EditText editTextUsername;
     private EditText editTextPassword;
@@ -50,7 +58,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         buttonLogin.setOnClickListener(this);
 
-        account = createSyncAccount(this);
+        Account account = createSyncAccount(this);
+        ContentResolver.addPeriodicSync(account, ACCOUNT_TYPE, Bundle.EMPTY, SYNC_INTERVAL);
     }
 
     public static Account createSyncAccount(Context context) {

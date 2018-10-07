@@ -24,9 +24,9 @@ public interface SecondaryDAO {
     @Query("SELECT * FROM " + DBConstants.SECONDARY_TABLE_NAME)
     LiveData<List<Secondary>> getAllSecondaries();
 
-    @Query("SELECT * FROM " + DBConstants.SECONDARY_TABLE_NAME + " WHERE id = :id")
-    Secondary getSecondary(int id);
+    @Query("SELECT * FROM " + DBConstants.SECONDARY_TABLE_NAME + " WHERE studentId = :studentId")
+    Secondary getSecondary(int studentId);
 
-    @Query("DELETE FROM " + DBConstants.SECONDARY_TABLE_NAME + " WHERE id = :id")
-    void deleteSecondary(int id);
+    @Query("DELETE FROM " + DBConstants.SECONDARY_TABLE_NAME + " WHERE studentId = :studentId")
+    void deleteSecondary(int studentId);
 }

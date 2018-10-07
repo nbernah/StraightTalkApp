@@ -17,7 +17,7 @@ public class Institution {
     private int id;
 
     @ColumnInfo(name = DBConstants.INSTITUTION_TABLE_COLUMN_STUDENT_NUMBER)
-    private int studentNumber;
+    private String studentNumber; // TODO change student number to string
 
     @ColumnInfo(name = DBConstants.INSTITUTION_TABLE_COLUMN_REGISTRATION_NUMBER)
     private String registrationNumber;
@@ -118,6 +118,63 @@ public class Institution {
     )
     private int course;
 
+    @ForeignKey(
+            entity = Student.class,
+            parentColumns = {
+                    DBConstants.STUDENT_TABLE_COLUMN_ID,
+                    DBConstants.STUDENT_TABLE_COLUMN_BURSARY_ID,
+                    DBConstants.STUDENT_TABLE_COLUMN_COMMENTS,
+                    DBConstants.STUDENT_TABLE_COLUMN_CURRENT_STATE,
+                    DBConstants.STUDENT_TABLE_COLUMN_DISTRICT_NAME,
+                    DBConstants.STUDENT_TABLE_COLUMN_DOB,
+                    DBConstants.STUDENT_TABLE_COLUMN_DROPOUT_REASON,
+                    DBConstants.STUDENT_TABLE_COLUMN_ENTRY_GRADE,
+                    DBConstants.STUDENT_TABLE_COLUMN_ETHNICITY,
+                    DBConstants.STUDENT_TABLE_COLUMN_FUNDER,
+                    DBConstants.STUDENT_TABLE_COLUMN_GENDER,
+                    DBConstants.STUDENT_TABLE_COLUMN_LEVEL,
+                    DBConstants.STUDENT_TABLE_COLUMN_NAME,
+                    DBConstants.STUDENT_TABLE_COLUMN_NATIONAL_ID,
+                    DBConstants.STUDENT_TABLE_COLUMN_NOTES,
+                    DBConstants.STUDENT_TABLE_COLUMN_PARENT1_NAME,
+                    DBConstants.STUDENT_TABLE_COLUMN_PARENT1_PHONE,
+                    DBConstants.STUDENT_TABLE_COLUMN_PARENT2_NAME,
+                    DBConstants.STUDENT_TABLE_COLUMN_PARENT2_PHONE,
+                    DBConstants.STUDENT_TABLE_COLUMN_STUDENT_EMAIL,
+                    DBConstants.STUDENT_TABLE_COLUMN_STUDENT_PHONE,
+                    DBConstants.STUDENT_TABLE_COLUMN_SUBCOUNTY,
+                    DBConstants.STUDENT_TABLE_COLUMN_UACE_GRADE,
+                    DBConstants.STUDENT_TABLE_COLUMN_UCE_GRADE,
+                    DBConstants.STUDENT_TABLE_COLUMN_VILLAGE,
+                    DBConstants.STUDENT_TABLE_COLUMN_YEAR_OF_END_AT_INSTITUTION,
+                    DBConstants.STUDENT_TABLE_COLUMN_YEAR_OF_REGISTRATION,
+                    DBConstants.STUDENT_TABLE_COLUMN_YEAR_OF_START_AT_INSTITUTION
+            },
+            childColumns = {
+                    DBConstants.INSTITUTION_TABLE_COLUMN_ID,
+                    DBConstants.INSTITUTION_TABLE_COLUMN_NAME,
+                    DBConstants.INSTITUTION_TABLE_COLUMN_QUALIFICATION,
+                    DBConstants.INSTITUTION_TABLE_COLUMN_REGISTRATION_NUMBER,
+                    DBConstants.INSTITUTION_TABLE_COLUMN_STUDENT_NUMBER,
+                    DBConstants.INSTITUTION_TABLE_COLUMN_STUDENT_BANK_NAME,
+                    DBConstants.INSTITUTION_TABLE_COLUMN_STUDENT_BANK_ACCOUNT,
+                    DBConstants.INSTITUTION_TABLE_COLUMN_STUDENT_BANK_ADDRESS,
+                    DBConstants.INSTITUTION_TABLE_COLUMN_OTHER_BANK_NAME,
+                    DBConstants.INSTITUTION_TABLE_COLUMN_OTHER_BANK_ACCOUNT,
+                    DBConstants.INSTITUTION_TABLE_COLUMN_OTHER_BANK_ADDRESS
+            },
+            onDelete = ForeignKey.CASCADE,
+            onUpdate = ForeignKey.CASCADE
+    )
+    private int studentId;
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
     //private String sForm;
 
     @NonNull
@@ -129,11 +186,11 @@ public class Institution {
         this.id = id;
     }
 
-    public int getStudentNumber() {
+    public String getStudentNumber() {
         return studentNumber;
     }
 
-    public void setStudentNumber(int studentNumber) {
+    public void setStudentNumber(String studentNumber) {
         this.studentNumber = studentNumber;
     }
 

@@ -98,6 +98,30 @@ public class BursaryDBRepository {
         new InsertHostelAsyncTask(hostelDAO).execute(hostels);
     }
 
+    public Student getStudent(int id) {
+        return studentDAO.getStudent(id);
+    }
+
+    public Secondary getSecondaryInfo(int id) {
+        return secondaryDAO.getSecondary(id);
+    }
+
+    public Institution getInstitutionInfo(int id) {
+        return institutionDAO.getInstitution(id);
+    }
+
+    public School getSchool(int id) {
+        return schoolDAO.getSchool(id);
+    }
+
+    public Hostel getHostel(int id) {
+        return hostelDAO.getHostel(id);
+    }
+
+    public Course getCourse(int id) {
+        return courseDAO.getCourse(id);
+    }
+
     public LiveData<List<Institution>> getAllInstitutions() {
         return allInstitutions;
     }
