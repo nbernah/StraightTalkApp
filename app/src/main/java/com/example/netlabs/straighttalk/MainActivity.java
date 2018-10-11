@@ -21,10 +21,10 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String LOGIN_URL = "http://localhost/phpmyadmin/sql.php?server=1&db=stalk&table=users&pos=0&token=" + MyConfig.TOKEN;
 
-    private static final String KEY_USERNAME = "username";
+    private static final String KEY_EMAIL = "email";
     private static final String KEY_PASSWORD = "password";
 
-    private EditText editTextUsername;
+    private EditText editTextEmail;
     private EditText editTextPassword;
 
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editTextUsername = findViewById(R.id.editTextusername);
+        editTextEmail = findViewById(R.id.editTextemail);
         editTextPassword = findViewById(R.id.editTextpassword);
         buttonLogin = findViewById(R.id.buttonlogin);
 
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void Login() {
 
-        final String username = editTextUsername.getText().toString().trim();
+        final String email = editTextEmail.getText().toString().trim();
         final String password = editTextPassword.getText().toString().trim();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, LOGIN_URL,
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put(KEY_USERNAME, username);
+                params.put(KEY_EMAIL, email);
                 params.put(KEY_PASSWORD, password);
                 return params;
             }

@@ -48,12 +48,23 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.netlabs.straighttalk.List_View" />
         </activity>
-        <activity android:name=".ViewSecondaryActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity
+            android:name=".ViewSecondaryActivity"
+            android:label="ViewSecondaryActivity"
+            android:parentActivityName=".List_View"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.netlabs.straighttalk.List_View" />
+        </activity>
+        <activity
+            android:name=".ViewInstitutionActivity"
+            android:label="ViewInstitutionActivity"
+            android:parentActivityName=".List_View"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.netlabs.straighttalk.List_View" />
         </activity>
     </application>
 

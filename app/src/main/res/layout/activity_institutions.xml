@@ -5,149 +5,159 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".TERTIARY">
-
-    <!-- TODO: Update blank fragment layout -->
+    tools:context=".model.database.entities.Institutions">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/fragment_Tertiary"
         android:layout_marginTop="@dimen/margin_top"
         android:layout_marginLeft="@dimen/margin_left"
         android:layout_marginBottom="@dimen/margin_bottom"
         android:layout_marginRight="@dimen/margin_right"
         android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="STF_ID:"
-            android:textColor="@color/Darkblack"
-            android:textSize="16dp"/>
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/Stf_id"
-            android:background="@drawable/textinput"
-            android:layout_marginTop="@dimen/margin_top"
-            android:hint="Enter stf_id"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="INST_NAME:"
-            android:textColor="@color/Darkblack"
-            android:textSize="16dp"/>
-        <Spinner
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/O_INST_NAME"
-            android:background="@drawable/textinput"
-            android:layout_marginTop="@dimen/margin_top" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="O_INST_COURSE:"
-            android:textColor="@color/Darkblack"
-            android:textSize="16dp"/>
-        <Spinner
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/O_INST_COURSE"
-            android:background="@drawable/textinput"
-            android:layout_marginTop="@dimen/margin_top"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="STUDENT_NUMBER:"
+            android:text="INSTITUTION_NAME:"
             android:textColor="@color/Darkblack"
             android:textSize="16dp"/>
         <EditText
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:id="@+id/STUDENT_NUMBER"
+            android:id="@+id/College_name"
             android:background="@drawable/textinput"
             android:layout_marginTop="@dimen/margin_top"
-            android:hint="Enter student_number"/>
+            android:hint="Enter institution_name"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="ACCOMODATION:"
-            android:textColor="@color/Darkblack"
-            android:textSize="16dp"/>
-        <Spinner
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/ACCOMODATION"
-            android:background="@drawable/textinput"
-            android:layout_marginTop="@dimen/margin_top"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="O_INST_YOS:"
+            android:text="COURSE_NAME:"
             android:textColor="@color/Darkblack"
             android:textSize="16dp"/>
         <EditText
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:id="@+id/O_INST_YOS"
+            android:id="@+id/Uni_course"
             android:background="@drawable/textinput"
             android:layout_marginTop="@dimen/margin_top"
-            android:hint="Enter o_inst_yos"/>
+            android:hint="Enter course_name"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="O_INST_YOC:"
+            android:text="INSTITUTION_STUDENT_ID:"
             android:textColor="@color/Darkblack"
             android:textSize="16dp"/>
         <EditText
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:id="@+id/O_INST_YOC"
+            android:id="@+id/Student_number"
             android:background="@drawable/textinput"
             android:layout_marginTop="@dimen/margin_top"
-            android:hint="Enter o_inst_yoc"/>
+            android:hint="Enter institution_student_id"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="AWARD_LEVEL:"
+            android:text="REGISTRATION_NUMBER:"
             android:textColor="@color/Darkblack"
             android:textSize="16dp"/>
         <EditText
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:id="@+id/AWARD_LEVEL"
+            android:id="@+id/Registration_number"
             android:background="@drawable/textinput"
             android:layout_marginTop="@dimen/margin_top"
-            android:hint="Enter award_level"/>
+            android:hint="Enter registration_number"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="HOSTEL_NAME:"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Accomodation"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"
+            android:hint="Enter hostel_name"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="QUALIFICATION:"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Award_level"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"
+            android:hint="Enter qualification"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="BANK:"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Bank"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"
+            android:hint="Enter bank"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="BANK_ADDR:"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Bank_addr"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"
+            android:hint="Enter bank_addr"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="ACCOUNT_NUMBER:"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Account_number"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"
+            android:hint="Enter account_number"/>
         <Button
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_top"
-            android:text="submit"
             android:id="@+id/submit_btn"
+            android:text="submit"
             android:background="@color/Black"
             android:textColor="@color/White"/>
     </LinearLayout>
-
-
-
-
-
-
 </ScrollView>

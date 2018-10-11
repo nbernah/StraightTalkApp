@@ -46,10 +46,18 @@ public class List_View extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else if (i==2) {
-                    Intent intent = new Intent(List_View.this, SECONDARY.class);
+                    Intent intent = new Intent(List_View.this, ViewSecondaryActivity.class);
                     startActivity(intent);
                 }
                 else if (i==3) {
+                    Intent intent = new Intent(List_View.this, SECONDARY.class);
+                    startActivity(intent);
+                }
+                else if (i==4) {
+                    Intent intent = new Intent(List_View.this, ViewInstitutionActivity.class);
+                    startActivity(intent);
+                }
+                else if (i==5) {
                     Intent intent = new Intent(List_View.this, INSTITUTIONS.class);
                     startActivity(intent);
                 }

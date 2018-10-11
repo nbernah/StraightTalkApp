@@ -14,21 +14,7 @@
         android:layout_marginBottom="@dimen/margin_bottom"
         android:layout_marginRight="@dimen/margin_right"
         android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="STF_ID:"
-            android:textColor="@color/Darkblack"
-            android:textSize="16dp"/>
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/Stf_id"
-            android:background="@drawable/textinput"
-            android:layout_marginTop="@dimen/margin_top"
-            android:hint="Enter stf_id"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -64,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="DOB:"
+            android:text="DATE_OF_BIRTH:"
             android:textColor="@color/Darkblack"
             android:textSize="16dp"/>
         <EditText
@@ -73,7 +59,7 @@
             android:id="@+id/Dob"
             android:background="@drawable/textinput"
             android:layout_marginTop="@dimen/margin_top"
-            android:hint="Enter dob"
+            android:hint="Enter date_of_birth"
             android:inputType="date"/>
         <TextView
             android:layout_width="match_parent"
@@ -88,6 +74,21 @@
             android:layout_height="wrap_content"
             android:id="@+id/Gender"
             android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="SCHOOL:"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <Spinner
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/school_type"
+            android:background="@drawable/textinput"
+            android:entries="@array/school_type_list"
             android:layout_marginTop="@dimen/margin_top"/>
         <TextView
             android:layout_width="match_parent"
@@ -109,37 +110,24 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="ENTRY_AGGRTS:"
+            android:text="STUDENT_ENTRY_GRADES:"
             android:textColor="@color/Darkblack"
             android:textSize="16dp"/>
         <EditText
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:id="@+id/Entry_aggrts"
+            android:id="@+id/Student_entry_grades"
+            android:inputType="number"
             android:background="@drawable/textinput"
             android:layout_marginTop="@dimen/margin_top"
-            android:hint="Enter entry_aggrts"/>
+            android:hint="Enter student_entry_grades"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="HEALTH_STATUS:"
-            android:textColor="@color/Darkblack"
-            android:textSize="16dp"/>
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/Health_status"
-            android:background="@drawable/textinput"
-            android:layout_marginTop="@dimen/margin_top"
-            android:hint="Enter health_status"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="STUD_CONTACT_PHONE:"
+            android:text="STUDENT_PHONE_NUMBER:"
             android:textColor="@color/Darkblack"
             android:textSize="16dp"/>
         <EditText
@@ -147,14 +135,15 @@
             android:layout_height="wrap_content"
             android:id="@+id/Stud_contact_phone"
             android:background="@drawable/textinput"
+            android:inputType="phone"
             android:layout_marginTop="@dimen/margin_top"
-            android:hint="Enter stud_contact_phone"/>
+            android:hint="Enter student_phone_number"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="STUD_CONTACT_EMAIL"
+            android:text="STUDENT_EMAIL_ADDRESS"
             android:textColor="@color/Darkblack"
             android:textSize="16dp"/>
         <EditText
@@ -163,13 +152,110 @@
             android:id="@+id/Stud_contact_email"
             android:background="@drawable/textinput"
             android:layout_marginTop="@dimen/margin_top"
-            android:hint="Enter stud_contact_email"/>
+            android:inputType="textEmailAddress"
+            android:hint="Enter student_email_address"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="PARENT1_FAMLY_NAME"
+            android:text="STUDENT_NATIONAL_ID"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Student_national_id"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"
+            android:inputType="text"
+            android:hint="Enter student_national_id"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="YEAR_OF_REGISTRATION"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/year_of_registration"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"
+            android:inputType="number"
+            android:hint="Enter year_of_registration"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="YEAR_OF_START_AT_SCHOOL"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/year_of_start_at_shool"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"
+            android:inputType="number"
+            android:hint="Enter year_of_start_at_school"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="EXPECTED_YEAR_OF_END_AT_SCHOOL"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/expected_year_of_end_at_school"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"
+            android:inputType="number"
+            android:hint="Enter expected_year_of_end_at_school"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="UCE_GRADE"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/uce_grade"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"
+            android:inputType="number"
+            android:hint="Enter uce"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="UACE"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/uace"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"
+            android:inputType="number"
+            android:hint="Enter uace"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="PARENT1_FAMILY_NAME"
             android:textColor="@color/Darkblack"
             android:textSize="16dp"/>
         <EditText
@@ -199,7 +285,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="PARENT1_CONTACT:"
+            android:text="PARENT1_PHONE_NUMBER:"
             android:textColor="@color/Darkblack"
             android:textSize="16dp"/>
         <EditText
@@ -208,7 +294,8 @@
             android:id="@+id/Parent1_contact"
             android:background="@drawable/textinput"
             android:layout_marginTop="@dimen/margin_top"
-            android:hint="Enter parent1_contact"/>
+            android:inputType="phone"
+            android:hint="Enter parent1_phone_number"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -244,7 +331,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="PARENT2_CONTACT:"
+            android:text="PARENT2_PHONE_NUMBER:"
             android:textColor="@color/Darkblack"
             android:textSize="16dp"/>
         <EditText
@@ -253,13 +340,14 @@
             android:id="@+id/Parent2_contact"
             android:background="@drawable/textinput"
             android:layout_marginTop="@dimen/margin_top"
-            android:hint="Enter parent2_contact"/>
+            android:inputType="phone"
+            android:hint="Enter parent2_phone_number"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="DIST_ORIGIN:"
+            android:text="DISTRICT_OF_ORIGIN:"
             android:textColor="@color/Darkblack"
             android:textSize="16dp"/>
         <Spinner
@@ -276,10 +364,11 @@
             android:text="SUB_COUNTY:"
             android:textColor="@color/Darkblack"
             android:textSize="16dp"/>
-        <Spinner
+        <EditText
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:id="@+id/Sub_county"
+            android:inputType="text"
             android:background="@drawable/textinput"
             android:layout_marginTop="@dimen/margin_top"/>
         <TextView
@@ -287,7 +376,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="VILLAGE_NAME:"
+            android:text="VILLAGE_OF_ORIGIN:"
             android:textColor="@color/Darkblack"
             android:textSize="16dp"/>
         <EditText
@@ -296,52 +385,7 @@
             android:id="@+id/Village_name"
             android:background="@drawable/textinput"
             android:layout_marginTop="@dimen/margin_top"
-            android:hint="Enter village_name"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="BANK:"
-            android:textColor="@color/Darkblack"
-            android:textSize="16dp"/>
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/Bank"
-            android:background="@drawable/textinput"
-            android:layout_marginTop="@dimen/margin_top"
-            android:hint="Enter bank"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="BANK_ADDR:"
-            android:textColor="@color/Darkblack"
-            android:textSize="16dp"/>
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/Bank_addr"
-            android:background="@drawable/textinput"
-            android:layout_marginTop="@dimen/margin_top"
-            android:hint="Enter bank_addr"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="ACCOUNT_NUMBER:"
-            android:textColor="@color/Darkblack"
-            android:textSize="16dp"/>
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/Account_number"
-            android:background="@drawable/textinput"
-            android:layout_marginTop="@dimen/margin_top"
-            android:hint="Enter account_number"/>
+            android:hint="Enter village_of_origin"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -387,12 +431,27 @@
             android:background="@drawable/textinput"
             android:layout_marginTop="@dimen/margin_top"
             android:hint="Enter notes"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="BURSARY_FUNDER:"
+            android:textColor="@color/Darkblack"
+            android:textSize="16dp"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Bursary_funder"
+            android:background="@drawable/textinput"
+            android:layout_marginTop="@dimen/margin_top"
+            android:hint="Enter bursary_funder"/>
         <Button
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_top"
-            android:id="@+id/submit_btn"
-            android:text="submit"
+            android:id="@+id/btn_next"
+            android:text="next"
             android:background="@color/Black"
             android:textColor="@color/White"/>
     </LinearLayout>

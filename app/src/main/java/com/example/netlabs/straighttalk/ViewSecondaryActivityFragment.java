@@ -44,12 +44,12 @@ public class ViewSecondaryActivityFragment extends Fragment {
         Secondary_recyclerView.setAdapter(recyclerViewAdapter);
         Secondary_recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         viewModel = ViewModelProviders.of(this).get(SecondaryViewModel.class);
-        viewModel.getSecondarySchools().observe(this, new Observer<List<Secondary>>() {
-            @Override
-            public void onChanged(@Nullable List<Secondary> secondary) {
-                recyclerViewAdapter.setSecondary(secondary);
-            }
-        });
+//        viewModel.getSecondarySchools().observe(this, new Observer<List<Secondary>>() {
+//            @Override
+//            public void onChanged(@Nullable List<Secondary> secondary) {
+//                recyclerViewAdapter.setSecondary(secondary);
+//            }
+//        });
 
         return root;
     }

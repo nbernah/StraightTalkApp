@@ -6,8 +6,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.example.netlabs.straighttalk.R;
 import com.example.netlabs.straighttalk.model.database.entities.Institutions;
+import com.example.netlabs.straighttalk.model.database.entities.PersonalDetails;
 
 
 import java.util.List;
@@ -22,23 +25,50 @@ public class InstitutionsRecyclerViewAdapter extends RecyclerView.Adapter<Instit
 
     @NonNull
     @Override
-    public InstitutionsRecyclerViewAdapter.InstitutionsViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return null;
+    public InstitutionsRecyclerViewAdapter.InstitutionsViewHolder onCreateViewHolder(
+            @NonNull ViewGroup viewGroup, int i
+    ) {
+        View itemView = inflater.inflate(
+                R.layout.view_institutions_list_item,
+                viewGroup,
+                false
+        );
+        return new InstitutionsRecyclerViewAdapter.InstitutionsViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull InstitutionsRecyclerViewAdapter.InstitutionsViewHolder institutionsViewHolder, int i) {
-
+    public void onBindViewHolder(
+            @NonNull InstitutionsRecyclerViewAdapter
+                    .InstitutionsViewHolder institutionsViewHolder, int i) {
+        if (detailsList != null) {
+            Institutions details = detailsList.get(i);
+            institutionsViewHolder.institutionsTitleTextView.setText(
+                    details.getStudentNumber() + ", " + details.getStudentNumber() + " <" +
+                            details.getRegistrationNumber() + ">");
+        } else {
+            institutionsViewHolder.institutionsTitleTextView.setText("No details");
+        }
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        if (detailsList != null) {
+            return detailsList.size();
+        }
+        else return 0;
+    }
+
+    public void setInstitutions(List<Institutions> detailsList) {
+        this.detailsList = detailsList;
+        notifyDataSetChanged();
     }
 
     class InstitutionsViewHolder extends RecyclerView.ViewHolder {
-        public InstitutionsViewHolder(@NonNull View itemView) {
+        private final TextView institutionsTitleTextView;
+
+        private InstitutionsViewHolder(View itemView) {
             super(itemView);
+            institutionsTitleTextView = itemView.findViewById(R.id.institutions_title_textView);
         }
     }
 }

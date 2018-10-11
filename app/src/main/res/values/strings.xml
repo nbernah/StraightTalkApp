@@ -52,12 +52,21 @@
     <string-array name="institutions">
         <item>VIEW PERSONAL_DETAILS</item>
         <item>NEW PERSONAL_DETAILS</item>
-        <item>SECONDARY</item>
-        <item>INSTITUTIONS</item>
-        <!--<item>INSTITUTIONS</item>-->
-        <!--<item>TERTIARY</item>-->
+        <item>VIEW SECONDARY</item>
+        <item>NEW SECONDARY</item>
+        <item>VIEW INSTITUTIONS</item>-->
+        <item>NEW INSTITUTIONS</item>-->
+    </string-array>
+    <string-array name="school_type_list">
+        <item>Secondary</item>
+        <item>University</item>
+        <item>Tertiary</item>
     </string-array>
     <string name="title_activity_view_personal_details">ViewPersonalDetailsActivity</string>
     <string name="view_personal_details_listitem_title_string">%s, %s</string>
+    <string name="title_activity_view_secondary">ViewSecondaryActivity</string>
+    <string name="view_secondary_listitem_title_string">%s, %s</string>
+    <string name="title_activity_view_institutions">ViewInstitutionsActivity</string>
+    <string name="view_institutions_listitem_title_string">%s, %s</string>
 
 </resources>

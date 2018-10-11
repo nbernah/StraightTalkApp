@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment"
-    android:name="com.example.netlabs.straighttalk.ViewSecondaryActivityFragment"
+    android:name="com.example.netlabs.straighttalk.ViewInstitutionsActivityFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:layout="@layout/fragment_view_secondary" />
+    tools:layout="@layout/fragment_view_institutions" />
