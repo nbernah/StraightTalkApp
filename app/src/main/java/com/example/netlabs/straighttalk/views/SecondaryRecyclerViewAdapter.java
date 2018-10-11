@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.netlabs.straighttalk.R;
-import com.example.netlabs.straighttalk.model.database.entities.PersonalDetails;
 import com.example.netlabs.straighttalk.model.database.entities.Secondary;
 
 import java.util.List;
@@ -39,14 +38,14 @@ public class SecondaryRecyclerViewAdapter extends RecyclerView.Adapter<Secondary
     public void onBindViewHolder(
             @NonNull SecondaryRecyclerViewAdapter
                     .SecondaryViewHolder secondaryViewHolder, int i) {
-        if (SchoolsList != null) {
-            Secondary schools = SchoolsList.get(i);
-            secondaryViewHolder.secondaryTitleTextView.setText(
-                    schools.getSsName() + ", " + schools.getSsStream() + " <" +
-                            schools.getSsForm() + ">");
-        } else {
-            secondaryViewHolder.secondaryTitleTextView.setText("No details");
-        }
+//        if (SchoolsList != null) {
+//            Secondary schools = SchoolsList.get(i);
+//            secondaryViewHolder.secondaryTitleTextView.setText(
+//                    schools.getSsName() + ", " + schools.getSsStream() + " <" +
+//                            schools.getSsForm() + ">");
+//        } else {
+//            secondaryViewHolder.secondaryTitleTextView.setText("No details");
+//        }
     }
 
     @Override

@@ -2,188 +2,139 @@ package com.example.netlabs.straighttalk.model.database.entities;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
-@Entity(tableName = "secondary")
-public class Secondary {
+import com.example.netlabs.straighttalk.model.database.DBConstants;
 
+@Entity(tableName = DBConstants.SECONDARY_TABLE_NAME)
+public class Secondary {
 
     @PrimaryKey(autoGenerate = true)
     @NonNull
-    @ColumnInfo(name = "STF_ID")
-    private int stfId;
+    @ColumnInfo(name = DBConstants.SECONDARY_TABLE_COLUMN_ID)
+    private int id;
 
+    @ColumnInfo(name = DBConstants.SECONDARY_TABLE_COLUMN_FORM)
+    private String form; // TODO change form to string
 
-    @NonNull
-    @ColumnInfo(name = "SS_NAME")
-    private String ssName;
+    @ColumnInfo(name = DBConstants.SECONDARY_TABLE_COLUMN_STREAM)
+    private String stream; // TODO change stream to string
 
-    @NonNull
-    @ColumnInfo(name = "SS_FORM")
-    private int ssForm;
+    @ColumnInfo(name = DBConstants.SECONDARY_TABLE_COLUMN_STUDENT_INDEX)
+    private String studentIndex;
 
-    @NonNull
-    @ColumnInfo(name = "SS_STREAM")
-    private char ssStream;
+    @ForeignKey(
+            entity = School.class,
+            parentColumns = {
+                    DBConstants.SCHOOL_TABLE_COLUMN_ID,
+                    DBConstants.SCHOOL_TABLE_COLUMN_SCHOOL_NAME,
+                    DBConstants.SCHOOL_TABLE_COLUMN_LEVEL
+            },
+            childColumns = {
+                DBConstants.SECONDARY_TABLE_COLUMN_ID,
+                    DBConstants.SECONDARY_TABLE_COLUMN_FORM,
+                    DBConstants.SECONDARY_TABLE_COLUMN_STREAM,
+                    DBConstants.SECONDARY_TABLE_COLUMN_STUDENT_INDEX
+            },
+            onDelete = ForeignKey.CASCADE,
+            onUpdate = ForeignKey.CASCADE
+    )
+    private int school;
 
-    @NonNull
-    @ColumnInfo(name = "FAV_SUBJECT")
-    private String favSubject;
+    @ForeignKey(
+            entity = Student.class,
+            parentColumns = {
+                    DBConstants.STUDENT_TABLE_COLUMN_ID,
+                    DBConstants.STUDENT_TABLE_COLUMN_BURSARY_ID,
+                    DBConstants.STUDENT_TABLE_COLUMN_COMMENTS,
+                    DBConstants.STUDENT_TABLE_COLUMN_CURRENT_STATE,
+                    DBConstants.STUDENT_TABLE_COLUMN_DISTRICT_NAME,
+                    DBConstants.STUDENT_TABLE_COLUMN_DOB,
+                    DBConstants.STUDENT_TABLE_COLUMN_DROPOUT_REASON,
+                    DBConstants.STUDENT_TABLE_COLUMN_ENTRY_GRADE,
+                    DBConstants.STUDENT_TABLE_COLUMN_ETHNICITY,
+                    DBConstants.STUDENT_TABLE_COLUMN_FUNDER,
+                    DBConstants.STUDENT_TABLE_COLUMN_GENDER,
+                    DBConstants.STUDENT_TABLE_COLUMN_LEVEL,
+                    DBConstants.STUDENT_TABLE_COLUMN_NAME,
+                    DBConstants.STUDENT_TABLE_COLUMN_NATIONAL_ID,
+                    DBConstants.STUDENT_TABLE_COLUMN_NOTES,
+                    DBConstants.STUDENT_TABLE_COLUMN_PARENT1_NAME,
+                    DBConstants.STUDENT_TABLE_COLUMN_PARENT1_PHONE,
+                    DBConstants.STUDENT_TABLE_COLUMN_PARENT2_NAME,
+                    DBConstants.STUDENT_TABLE_COLUMN_PARENT2_PHONE,
+                    DBConstants.STUDENT_TABLE_COLUMN_STUDENT_EMAIL,
+                    DBConstants.STUDENT_TABLE_COLUMN_STUDENT_PHONE,
+                    DBConstants.STUDENT_TABLE_COLUMN_SUBCOUNTY,
+                    DBConstants.STUDENT_TABLE_COLUMN_UACE_GRADE,
+                    DBConstants.STUDENT_TABLE_COLUMN_UCE_GRADE,
+                    DBConstants.STUDENT_TABLE_COLUMN_VILLAGE,
+                    DBConstants.STUDENT_TABLE_COLUMN_YEAR_OF_END_AT_INSTITUTION,
+                    DBConstants.STUDENT_TABLE_COLUMN_YEAR_OF_REGISTRATION,
+                    DBConstants.STUDENT_TABLE_COLUMN_YEAR_OF_START_AT_INSTITUTION
+            },
+            childColumns = {
+                    DBConstants.SECONDARY_TABLE_COLUMN_ID,
+                    DBConstants.SECONDARY_TABLE_COLUMN_FORM,
+                    DBConstants.SECONDARY_TABLE_COLUMN_STREAM,
+                    DBConstants.SECONDARY_TABLE_COLUMN_STUDENT_INDEX
+            },
+            onUpdate = ForeignKey.CASCADE,
+            onDelete = ForeignKey.CASCADE
+    )
+    private int studentId;
 
-    @NonNull
-    @ColumnInfo(name = "FAV_SPORT")
-    private String favSport;
-
-    @NonNull
-    @ColumnInfo(name = "STUDENT_ID")
-    private String studentId;
-
-    @NonNull
-    @ColumnInfo(name = "BURSARY_FUNDER")
-    private String bursaryFunder;
-
-    @NonNull
-    @ColumnInfo(name = "CURRENT_CLASS")
-    private String currentClass;
-
-
-    @NonNull
-    @ColumnInfo(name = "CLASS_COMPLETION_SS")
-    private String classCompletionSS;
-
-    @NonNull
-    @ColumnInfo(name = "COMPLETION_SS")
-    private String completionSS;
-
-
-    @NonNull
-    @ColumnInfo(name = "EXAM_DATE")
-    private String examDate;
-
-    @NonNull
-    @ColumnInfo(name = "BURSARY_DATE")
-    private String bursaryDate;
-
-    @NonNull
-    @ColumnInfo(name = "BURSARY_YO_START")
-    private String bursaryYoStart;
-
-    //private List<SSSubject> subjectList;
-    //private SSchools schoolCode;
-
-    public Secondary() {
-    }
-
-    public int getStfId() {
-        return stfId;
-    }
-
-    public void setStfId(int stfId) {
-        this.stfId = stfId;
-    }
-
-    public String getSsName() {
-        return ssName;
-    }
-
-    public void setSsName(String ssName) {
-        this.ssName = ssName;
-    }
-
-    public int getSsForm() {
-        return ssForm;
-    }
-
-    public void setSsForm(int ssForm) {
-        this.ssForm = ssForm;
-    }
-
-    public char getSsStream() {
-        return ssStream;
-    }
-
-    public void setSsStream(char ssStream) {
-        this.ssStream = ssStream;
-    }
-
-    public String getFavSubject() {
-        return favSubject;
-    }
-
-    public void setFavSubject(String favSubject) {
-        this.favSubject = favSubject;
-    }
-
-    public String getFavSport() {
-        return favSport;
-    }
-
-    public void setFavSport(String favSport) {
-        this.favSport = favSport;
-    }
-
-    public String getStudentId() {
+    public int getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(String studentId) {
+    public void setStudentId(int studentId) {
         this.studentId = studentId;
     }
 
-    public String getBursaryFunder() {
-        return bursaryFunder;
+    @NonNull
+    public int getId() {
+        return id;
     }
 
-    public void setBursaryFunder(String bursaryFunder) {
-        this.bursaryFunder = bursaryFunder;
+    public void setId(@NonNull int id) {
+        this.id = id;
     }
 
-    public String getCurrentClass() {
-        return currentClass;
+    @NonNull
+    public String getForm() {
+        return form;
     }
 
-    public void setCurrentClass(String currentClass) {
-        this.currentClass = currentClass;
+    public void setForm(@NonNull String form) {
+        this.form = form;
     }
 
-    public String getClassCompletionSS() {
-        return classCompletionSS;
+    @NonNull
+    public String getStream() {
+        return stream;
     }
 
-    public void setClassCompletionSS(String classCompletionSS) {
-        this.classCompletionSS = classCompletionSS;
+    public void setStream(@NonNull String stream) {
+        this.stream = stream;
     }
 
-    public String getCompletionSS() {
-        return completionSS;
+    @NonNull
+    public String getStudentIndex() {
+        return studentIndex;
     }
 
-    public void setCompletionSS(String completionSS) {
-        this.completionSS = completionSS;
+    public void setStudentIndex(@NonNull String studentIndex) {
+        this.studentIndex = studentIndex;
     }
 
-    public String getExamDate() {
-        return examDate;
+    public int getSchool() {
+        return school;
     }
 
-    public void setExamDate(String examDate) {
-        this.examDate = examDate;
-    }
-
-    public String getBursaryDate() {
-        return bursaryDate;
-    }
-
-    public void setBursaryDate(String bursaryDate) {
-        this.bursaryDate = bursaryDate;
-    }
-
-    public String getBursaryYoStart() {
-        return bursaryYoStart;
-    }
-
-    public void setBursaryYoStart(String bursaryYoStart) {
-        this.bursaryYoStart = bursaryYoStart;
+    public void setSchool(int school) {
+        this.school = school;
     }
 }

@@ -7,11 +7,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toolbar;
-
-import com.example.netlabs.straighttalk.model.database.entities.Institutions;
-import com.example.netlabs.straighttalk.model.database.entities.PersonalDetails;
-import com.example.netlabs.straighttalk.model.database.entities.Secondary;
 
 public class List_View extends AppCompatActivity {
     //Toolbar toolbar;
