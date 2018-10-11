@@ -1,10 +1,8 @@
 package com.example.netlabs.straighttalk;
 
-import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -19,11 +17,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.netlabs.straighttalk.model.database.entities.PersonalDetails;
+import com.example.netlabs.straighttalk.model.database.entities.Student;
 import com.example.netlabs.straighttalk.viewmodel.PersonalDetailsViewModel;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class PERSONAL_DETAILS extends AppCompatActivity implements View.OnClickListener{

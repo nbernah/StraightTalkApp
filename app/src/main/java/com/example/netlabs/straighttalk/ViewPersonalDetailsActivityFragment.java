@@ -11,7 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.netlabs.straighttalk.model.database.entities.PersonalDetails;
+import com.example.netlabs.straighttalk.model.database.entities.Student;
 import com.example.netlabs.straighttalk.viewmodel.PersonalDetailsViewModel;
 import com.example.netlabs.straighttalk.views.PersonalDetailsRecyclerViewAdapter;
 
@@ -39,9 +39,9 @@ public class ViewPersonalDetailsActivityFragment extends Fragment {
         Personal_Details_recyclerView.setAdapter(recyclerViewAdapter);
         Personal_Details_recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         viewModel = ViewModelProviders.of(this).get(PersonalDetailsViewModel.class);
-        viewModel.getPersonalDetails().observe(this, new Observer<List<PersonalDetails>>() {
+        viewModel.getPersonalDetails().observe(this, new Observer<List<Student>>() {
             @Override
-            public void onChanged(@Nullable List<PersonalDetails> personalDetails) {
+            public void onChanged(@Nullable List<Student> personalDetails) {
                 recyclerViewAdapter.setPersonalDetails(personalDetails);
             }
         });

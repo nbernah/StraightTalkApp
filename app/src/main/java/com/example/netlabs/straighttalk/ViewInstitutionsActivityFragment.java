@@ -1,25 +1,15 @@
 package com.example.netlabs.straighttalk;
 
 import android.app.Fragment;
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.netlabs.straighttalk.model.database.entities.Institutions;
-import com.example.netlabs.straighttalk.model.database.entities.PersonalDetails;
 import com.example.netlabs.straighttalk.viewmodel.InstitutionsViewModel;
-import com.example.netlabs.straighttalk.viewmodel.PersonalDetailsViewModel;
 import com.example.netlabs.straighttalk.views.InstitutionsRecyclerViewAdapter;
-import com.example.netlabs.straighttalk.views.PersonalDetailsRecyclerViewAdapter;
-
-import java.util.List;
 
 public class ViewInstitutionsActivityFragment extends Fragment {
     RecyclerView Institutions_recyclerView;

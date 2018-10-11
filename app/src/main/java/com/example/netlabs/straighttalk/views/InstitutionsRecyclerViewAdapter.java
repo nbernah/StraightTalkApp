@@ -9,15 +9,14 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.netlabs.straighttalk.R;
-import com.example.netlabs.straighttalk.model.database.entities.Institutions;
-import com.example.netlabs.straighttalk.model.database.entities.PersonalDetails;
+import com.example.netlabs.straighttalk.model.database.entities.Institution;
 
 
 import java.util.List;
 
 public class InstitutionsRecyclerViewAdapter extends RecyclerView.Adapter<InstitutionsRecyclerViewAdapter.InstitutionsViewHolder> {
     LayoutInflater inflater;
-    List<Institutions> detailsList;
+    List<Institution> detailsList;
 
     public InstitutionsRecyclerViewAdapter(Context context) {
         inflater = LayoutInflater.from(context);
@@ -40,14 +39,14 @@ public class InstitutionsRecyclerViewAdapter extends RecyclerView.Adapter<Instit
     public void onBindViewHolder(
             @NonNull InstitutionsRecyclerViewAdapter
                     .InstitutionsViewHolder institutionsViewHolder, int i) {
-        if (detailsList != null) {
-            Institutions details = detailsList.get(i);
-            institutionsViewHolder.institutionsTitleTextView.setText(
-                    details.getStudentNumber() + ", " + details.getStudentNumber() + " <" +
-                            details.getRegistrationNumber() + ">");
-        } else {
-            institutionsViewHolder.institutionsTitleTextView.setText("No details");
-        }
+//        if (detailsList != null) {
+//            Institutions details = detailsList.get(i);
+//            institutionsViewHolder.institutionsTitleTextView.setText(
+//                    details.getStudentNumber() + ", " + details.getStudentNumber() + " <" +
+//                            details.getRegistrationNumber() + ">");
+//        } else {
+//            institutionsViewHolder.institutionsTitleTextView.setText("No details");
+//        }
     }
 
     @Override
@@ -58,10 +57,10 @@ public class InstitutionsRecyclerViewAdapter extends RecyclerView.Adapter<Instit
         else return 0;
     }
 
-    public void setInstitutions(List<Institutions> detailsList) {
-        this.detailsList = detailsList;
-        notifyDataSetChanged();
-    }
+//    public void setInstitutions(List<Institutions> detailsList) {
+//        this.detailsList = detailsList;
+//        notifyDataSetChanged();
+//    }
 
     class InstitutionsViewHolder extends RecyclerView.ViewHolder {
         private final TextView institutionsTitleTextView;

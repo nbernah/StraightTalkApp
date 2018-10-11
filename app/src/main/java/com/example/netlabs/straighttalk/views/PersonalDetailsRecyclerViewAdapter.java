@@ -9,14 +9,14 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.netlabs.straighttalk.R;
-import com.example.netlabs.straighttalk.model.database.entities.PersonalDetails;
+import com.example.netlabs.straighttalk.model.database.entities.Student;
 
 import java.util.List;
 
 public class PersonalDetailsRecyclerViewAdapter extends RecyclerView.Adapter<PersonalDetailsRecyclerViewAdapter.PersonalDetailsViewHolder> {
 
     LayoutInflater inflater;
-    List<PersonalDetails> detailsList;
+    List<Student> detailsList;
 
     public PersonalDetailsRecyclerViewAdapter(Context context) {
         inflater = LayoutInflater.from(context);
@@ -39,14 +39,14 @@ public class PersonalDetailsRecyclerViewAdapter extends RecyclerView.Adapter<Per
     public void onBindViewHolder(
             @NonNull PersonalDetailsRecyclerViewAdapter
                     .PersonalDetailsViewHolder personalDetailsViewHolder, int i) {
-        if (detailsList != null) {
-            PersonalDetails details = detailsList.get(i);
-            personalDetailsViewHolder.personalDetailsTitleTextView.setText(
-                    details.getStudFamilyName() + ", " + details.getStudGivenName() + " <" +
-            details.getStudContactEmail() + ">");
-        } else {
-            personalDetailsViewHolder.personalDetailsTitleTextView.setText("No details");
-        }
+//        if (detailsList != null) {
+//            Student details = detailsList.get(i);
+//            personalDetailsViewHolder.personalDetailsTitleTextView.setText(
+//                    details.getStudFamilyName() + ", " + details.getStudGivenName() + " <" +
+//            details.getStudContactEmail() + ">");
+//        } else {
+//            personalDetailsViewHolder.personalDetailsTitleTextView.setText("No details");
+//        }
     }
 
     @Override
@@ -57,7 +57,7 @@ public class PersonalDetailsRecyclerViewAdapter extends RecyclerView.Adapter<Per
         else return 0;
     }
 
-    public void setPersonalDetails(List<PersonalDetails> detailsList) {
+    public void setPersonalDetails(List<Student> detailsList) {
         this.detailsList = detailsList;
         notifyDataSetChanged();
     }
